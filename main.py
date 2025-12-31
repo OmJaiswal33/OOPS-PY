@@ -2,7 +2,7 @@
 #Class : A class is a blueprint or template used to create objects. It defines what data (attributes) and what actions (methods) the objects will have.
 #Objects : An object is an instance of a class — a real entity created using the class.
 # class students:
-#     class_yr = 2025 #its a class variable same for all objects instantied for this particular class.
+#     class_yr = 2025 # its a class variable same for all objects instantied for this particular class.
 #     student_count = 0; #class variable.
 #     def __init__(self, name, age, grade):
 #         self.name = name
@@ -49,7 +49,7 @@ class vehicle(ABC):
     @abstractmethod
     def stop(self):
         pass
-# v1 = vehicle() # not possible
+# v1 = vehicle() #not possible as vehicle is an abstract class cant create object out of it.
 
 class car(vehicle):
     def go(self):
