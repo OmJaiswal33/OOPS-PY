@@ -35,6 +35,7 @@
 
 # c1 = petrolcar("Mycar","petrol","petroldrinkingengine",25000)
 # print(c1.stop())
+# for inheriting from more than 1 class do class idk(abc,pqr) now class idk is inherting from both abc and pqr if idk inherits from abc and pqr and abc and pqr both have same method and idk doesnt have that method then MRO is used and left most ie abc is used for overriding ie abc's method is used. 
 
 # NOTE FOR ABOVE CODE : If you do self.class_variable then each object has its own version (copy) of this class variable changes in this copy of a class varible wont affect the original class variable as its class dependent not object dependent but also remember you do class_variable += 1 in constructor as constructor runs when an object is instantied so you can use this to count total no. of objects made for that class.
 
@@ -119,4 +120,18 @@ r1.describe()
 shape.describe(r1)
 #if the describe() was without the super() inside the child class then if someone ran childobject.describe then its gonna do child method first its overriden there. also now being contained the super() method  the child method is ran as it overrides the parent classes method.
 
+#Polymorphism 
+class shape :
+    pass
+
+class circle(shape):
+    pass
+
+class square(shape):
+    pass
+
+class triangle(shape):
+    pass
+
+shapes = [circle(),square(),triangle()]
  
