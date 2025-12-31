@@ -81,10 +81,42 @@ class boat(vehicle):
     def sound(self):
         print("toot toot")
 
-boaty = boat()
-boaty.go()
-boaty.stop()
-boaty.sound()
+# boaty = boat()
+# boaty.go()
+# boaty.stop()
+# boaty.sound()
 
+
+class shape(ABC):
+    def __init__(self,name,color):
+        self.name = name
+        self.color = color
+
+    def describe(self):
+        print(f"Hey i am {self.name},my color is {self.color}.")
+
+class rectangle(shape):
+    def __init__(self, name, color,length,breadth):
+        super().__init__(name, color)
+        self.length = length
+        self.breadth = breadth
+    def area(self):
+        print(f"area of {self.name} rectangle is {self.length*self.breadth} sq")
+    def describe(self):
+        super().describe()
+        print(f"Length of {self.name}  is {self.length} cm and breadth of {self.name}  is {self.breadth} cm , and area of {self.name} would be {self.length*self.breadth} cm sq.")
+class circle(shape):
+    def __init__(self,name,color,radius):
+        super().__init__(name,color)
+        self.radius = radius
+    def area(self):
+        print(f"Area of the {self.name} is {3.14*self.radius*self.radius} cm sq")
+    def describe(self):
+        super().describe()
+        print(f"Radius of {self.name} is {self.radius} cm and area of {self.name} is {3.14*self.radius*self.radius}cm sq.")
+r1 = rectangle("Rectangly rectangle","Red",12,15)
+r1.describe()
+shape.describe(r1)
+#if the describe() was without the super() inside the child class then if someone ran childobject.describe then its gonna do child method first its overriden there. also now being contained the super() method  the child method is ran as it overrides the parent classes method.
 
  
