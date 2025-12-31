@@ -42,7 +42,6 @@
 # abstract classes : class that cannot be instantied on its own its meant to be subclassed.THey are supposed to be parent to children classes they are meant to have abstract methods which are declare but have no implementations prevents instantiation of the class itself , it requires childrne to use inherited abstract methods.
 
 from abc import ABC,abstractmethod
-# as this is a abstract class they dont need no constructor as they cant be instantied as they need child classes to inherit them and then objects are made of that child class.
 class vehicle(ABC):
     @abstractmethod
     def go(self):
@@ -86,3 +85,6 @@ boaty = boat()
 boaty.go()
 boaty.stop()
 boaty.sound()
+
+
+ 
